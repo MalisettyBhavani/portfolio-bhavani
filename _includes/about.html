@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Bhavani Malisetty</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <div class="user-details">
+      <h1>About Me</h1>
+    </div>
+
+    <div class="about-container">
+      <!-- About Me Text -->
+      <div class="about-text">
+        <p align="justify">
+          Hello, I’m <strong>Bhavani Malisetty</strong>, an LLM Engineer and Applied Research Scientist based in Omaha, NE.
+          I recently completed my M.S. in Computer Science at the University of Nebraska Omaha, where I built
+          production-ready AI systems: a Retrieval-Augmented Generation (RAG) platform over lecture notes and videos,
+          an ASR→NLP→embeddings video intelligence pipeline, and fine-tuned transformer/VLM models that improved QA
+          accuracy by ~20%. I focus on prompt and embedding optimization, observability, mixed-precision/quantized
+          inference, and real-time UX with React, FastAPI, WebSockets, and vector search to deliver reliable, low-latency AI.
+        </p>
+        <div class="chart-container">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-details">
+      <h2 id="what-i-do"><strong>What I Do</strong></h2>
+    </div>
+    <div>
+      <ul>
+        <li>
+          🤖 LLM Systems & RAG: End-to-end QA systems with retrieval, evaluation guardrails, and responsible-AI checks.
+        </li>
+        <li>
+          🧠 Model Training: SFT/LoRA and quantization (4/5/8-bit) on LLaMA-2 for multi-label policy classification and VLM tuning.
+        </li>
+        <li>
+          ⚙️ MLOps & Performance: Mixed-precision inference, vector retrieval optimization, and latency/throughput monitoring.
+        </li>
+        <li>
+          🧩 Full-Stack for AI: React + FastAPI + WebSockets for real-time interfaces; CI/CD and production hardening.
+        </li>
+      </ul>
+      <p>
+        Recent roles include LLM Engineer Intern at UNO (real-time RAG over notes/videos) and Applied Research Scientist at UNO
+        (LLaMA-2 baseline/fine-tuned/quantized models with +12% accuracy on OPP-115 and a web-based classifier). Previously, at
+        Capgemini, I engineered Django REST APIs integrating Oracle EBS, boosting throughput by 18% and reducing latency by 12%.
+      </p>
+    </div>
+
+    <div class="user">
+      <div class="tech">
+        <h2>Frameworks</h2>
+        <i class="devicon-react-original colored"></i>
+        <i class="devicon-django-plain colored"></i>
+        <i class="devicon-fastapi-plain colored"></i>
+        <i class="devicon-tensorflow-original colored"></i>
+        <i class="devicon-pytorch-original colored"></i>
+      </div>
+      <div class="tech">
+        <h2>Tech Stack</h2>
+        <i class="devicon-python-plain colored"></i>
+        <i class="devicon-java-plain colored"></i>
+        <i class="devicon-typescript-plain colored"></i>
+        <i class="devicon-mysql-plain colored"></i>
+        <i class="devicon-oracle-original colored"></i>
+        <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+        <i class="devicon-docker-plain colored"></i>
+        <i class="devicon-kubernetes-plain colored"></i>
+      </div>
+      <div class="tech">
+        <h2>Tools</h2>
+        <i class="devicon-github-original colored"></i>
+        <i class="devicon-jenkins-plain colored"></i>
+        <i class="devicon-jupyter-plain-wordmark colored"></i><br />
+        <i class="devicon-vscode-plain colored"></i>
+      </div>
+    </div>
+
+    <script>
+      const data = {
+        labels: [
+          // **Layer 1: Core LLM & Apps**
+          "RAG", "Prompt Engineering", "Embeddings/Retrieval", "VLM/LLM Fine-tuning", "Observability",
+          "Latency/Performance", "WebSockets/Real-time", "React/FastAPI", "Responsible AI", "Evaluation/Guardrails",
+
+          // **Layer 2: Modeling & NLP**
+          "Multi-Label NLP", "Quantization (4/5/8-bit)", "Mixed-Precision", "Vector Stores", "ASR → NLP Pipeline", "Time Series",
+
+          // **Layer 3: Engineering & Infrastructure**
+          "Django REST", "Cloud (AWS)", "Kubernetes/Docker",
+
+          // **Layer 4: Research & Optimization**
+          "Optimization", "Experimentation", "Model Evaluation"
+        ],
+        datasets: [
+          {
+            label: "Core LLM & Apps",
+            data: [5, 5, 5, 4, 4, 5, 5, 5, 4, 4, null, null, null, null, null, null, null, null, null, null, null, null],
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 2,
+            pointBackgroundColor: 'rgba(54, 162, 235, 1)',
+            pointRadius: 5,
+          },
+          {
+            label: "Modeling & NLP",
+            data: [null, null, null, null, null, null, null, null, null, null, 5, 5, 5, 4, 4, 3, null, null, null, null, null, null],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 2,
+            pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+            pointRadius: 5,
+          },
+          {
+            label: "Engineering & Infrastructure",
+            data: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 5, 4, 4, null, null, null],
+            backgroundColor: 'rgba(255, 206, 86, 0.2)',
+            borderColor: 'rgba(255, 206, 86, 1)',
+            borderWidth: 2,
+            pointBackgroundColor: 'rgba(255, 206, 86, 1)',
+            pointRadius: 5,
+          },
+          {
+            label: "Research & Optimization",
+            data: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 5, 4, 5],
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 2,
+            pointBackgroundColor: 'rgba(75, 192, 192, 1)',
+            pointRadius: 5,
+          }
+        ]
+      };
+
+      const config = {
+        type: 'radar',
+        data: data,
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          animation: {
+            duration: 1000,
+            easing: 'easeInOutBounce'
+          },
+          plugins: {
+            legend: {
+              display: true,
+              position: 'bottom',
+            },
+            tooltip: {
+              enabled: true,
+              backgroundColor: 'rgba(0, 0, 0, 0.7)',
+              titleFont: { size: 14, weight: 'bold', color: '#ffffff' },
+              bodyFont: { size: 12, weight: 'bold', color: '#ffffff' }
+            }
+          },
+          scales: {
+            r: {
+              beginAtZero: true,
+              suggestedMax: 5,
+              ticks: { stepSize: 1, showLabelBackdrop: false, display: false },
+              grid: { color: 'rgba(200, 200, 200, 0.3)' },
+              angleLines: { color: 'rgba(100, 100, 100, 0.2)' },
+              pointLabels: {
+                font: { size: 12, weight: 'bold' },
+                color: 'rgba(38,70,83,0.84)'
+              }
+            }
+          }
+        }
+      };
+
+      const ctx = document.getElementById('myChart').getContext('2d');
+      new Chart(ctx, config);
+    </script>
+  </body>
+</html>

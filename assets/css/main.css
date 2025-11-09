@@ -3416,15 +3416,28 @@ sub,sup{
         font-size:40px
     }
 }
-.header-links{
+/* .header-links{
     margin:10px
+} */
+
+.header-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap; /* allows wrapping only if needed */
 }
-.header-links .link{
+
+.header-links .link {
+  white-space: nowrap; /* keeps words together */
+  font-size: 1.1rem; /* optional: adjust if text looks too large */
+}
+
+/* .header-links .link{
     color:#fff;
     text-decoration:none;
     font-size:15px;
     margin:10px
-}
+} */
 @media only screen and (min-width:550px){
     .header-links .link{
         font-size:20px

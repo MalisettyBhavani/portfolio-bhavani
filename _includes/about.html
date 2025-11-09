@@ -9,6 +9,66 @@
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+    .skills-3col {
+      max-width: 1200px;
+      margin: 32px auto 10px;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;               /* space between the three columns */
+      align-items: start;
+    }
+
+    .skills-col {
+      text-align: center;
+    }
+
+    .skills-col h2 {
+      font-size: clamp(1.6rem, 2.2vw, 2.4rem);
+      font-weight: 600;
+      color: #333;
+      margin: 0 0 18px;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 36px;               /* space between icons (within a column) */
+      flex-wrap: nowrap;       /* keep one row like your screenshot */
+    }
+
+    .icons i {
+      font-size: 64px;         /* uniform icon size */
+      line-height: 1;
+      transition: transform .2s ease, filter .2s ease;
+    }
+
+    .icons i:hover {
+      transform: translateY(-2px) scale(1.06);
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,.12));
+    }
+
+    /* Responsive: stack columns and shrink icons on small screens */
+    @media (max-width: 980px) {
+      .skills-3col {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .icons {
+        flex-wrap: wrap;       /* allow wrapping on mobile */
+        gap: 22px;
+      }
+      .icons i {
+        font-size: 48px;
+      }
+    }
+
+    </style>
+
+
+
   </head>
 
   <body>
@@ -20,12 +80,14 @@
       <!-- About Me Text -->
       <div class="about-text">
         <p align="justify">
-          Hello, I’m <strong>Bhavani Malisetty</strong>, an LLM Engineer and Applied Research Scientist based in Omaha, NE.
-          I recently completed my M.S. in Computer Science at the University of Nebraska Omaha, where I built
-          production-ready AI systems: a Retrieval-Augmented Generation (RAG) platform over lecture notes and videos,
-          an ASR→NLP→embeddings video intelligence pipeline, and fine-tuned transformer/VLM models that improved QA
-          accuracy by ~20%. I focus on prompt and embedding optimization, observability, mixed-precision/quantized
-          inference, and real-time UX with React, FastAPI, WebSockets, and vector search to deliver reliable, low-latency AI.
+          Hello, I’m <strong>Bhavani Malisetty</strong>, an LLM Engineer and Applied Research Scientist based in Omaha, Nebraska. 
+          I recently earned my Master’s in Computer Science from the University of Nebraska Omaha, where my research focused on 
+          advancing the efficiency and accessibility of Large Language Models (LLMs) through fine-tuning and quantization. 
+          My work includes building scalable, production-ready AI systems such as Retrieval-Augmented Generation (RAG) pipelines, 
+          video intelligence frameworks integrating ASR and NLP, and transformer-based models that enhance real-time question answering. 
+          I specialize in optimizing model performance through prompt engineering, embedding refinement, and low-latency deployment 
+          using React, FastAPI, and WebSockets. I’m deeply passionate about developing reliable, efficient, and human-centered AI systems 
+          that bridge the gap between research and real-world impact.
         </p>
         <div class="chart-container">
           <canvas id="myChart"></canvas>
@@ -37,55 +99,62 @@
       <h2 id="what-i-do"><strong>What I Do</strong></h2>
     </div>
     <div>
-      <ul>
-        <li>
-          🤖 LLM Systems & RAG: End-to-end QA systems with retrieval, evaluation guardrails, and responsible-AI checks.
-        </li>
-        <li>
-          🧠 Model Training: SFT/LoRA and quantization (4/5/8-bit) on LLaMA-2 for multi-label policy classification and VLM tuning.
-        </li>
-        <li>
-          ⚙️ MLOps & Performance: Mixed-precision inference, vector retrieval optimization, and latency/throughput monitoring.
-        </li>
-        <li>
-          🧩 Full-Stack for AI: React + FastAPI + WebSockets for real-time interfaces; CI/CD and production hardening.
-        </li>
-      </ul>
-      <p>
-        Recent roles include LLM Engineer Intern at UNO (real-time RAG over notes/videos) and Applied Research Scientist at UNO
-        (LLaMA-2 baseline/fine-tuned/quantized models with +12% accuracy on OPP-115 and a web-based classifier). Previously, at
-        Capgemini, I engineered Django REST APIs integrating Oracle EBS, boosting throughput by 18% and reducing latency by 12%.
-      </p>
+    <ul>
+      <li>
+        🤖 <strong>LLM Systems & Retrieval:</strong> Designed and deployed end-to-end question-answering pipelines integrating retrieval, evaluation guardrails, and responsible AI validation mechanisms.
+      </li>
+      <li>
+        🧠 <strong>Model Training & Optimization:</strong> Fine-tuned and quantized LLaMA-2 models (4-bit, 5-bit, 8-bit) using SFT and LoRA for multi-label privacy policy classification and vision-language model adaptation.
+      </li>
+      <li>
+        ⚙️ <strong>MLOps & Scalability:</strong> Implemented mixed-precision inference, vector retrieval optimization, and latency-throughput monitoring to enhance performance and deployment efficiency.
+      </li>
+      <li>
+        🧩 <strong>Full-Stack AI Development:</strong> Built interactive, real-time applications using React, FastAPI, and WebSockets, supported by CI/CD pipelines and production-grade deployment practices.
+      </li>
+    </ul>
+
+    <p align="justify">
+      My recent experience includes serving as an <strong>LLM Engineer Intern</strong> at the University of Nebraska Omaha, where I developed real-time Retrieval-Augmented Generation (RAG) systems for lecture content, and as an <strong>Applied Research Scientist</strong>, where I fine-tuned and quantized LLaMA-2 models, achieving a 12% improvement in multi-label classification accuracy on the OPP-115 dataset. 
+      Previously, as a <strong>Software Engineer</strong> at Capgemini Engineering, I built and optimized Django REST APIs integrated with Oracle EBS, increasing throughput by 18% and reducing latency by 12%.
+    </p>
+</div>
+
+
+   <!-- Skills (3 columns) -->
+    <div class="skills-3col">
+      <!-- Frameworks -->
+      <div class="skills-col">
+        <h2>Frameworks</h2>
+        <div class="icons">
+          <i class="devicon-django-plain colored" title="Django"></i>
+          <i class="devicon-tensorflow-original colored" title="TensorFlow"></i>
+          <i class="devicon-pytorch-original colored" title="PyTorch"></i>
+        </div>
+      </div>
+
+      <!-- Tech Stack -->
+      <div class="skills-col">
+        <h2>Tech Stack</h2>
+        <div class="icons">
+          <i class="devicon-python-plain colored" title="Python"></i>
+          <i class="devicon-numpy-original colored" title="NumPy"></i>
+          <i class="devicon-pandas-original colored" title="Pandas"></i>
+          <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="skills-col">
+        <h2>Tools</h2>
+        <div class="icons">
+          <i class="devicon-github-original colored" title="GitHub"></i>
+          <i class="devicon-git-plain colored" title="Git"></i>
+          <i class="devicon-jupyter-plain-wordmark colored" title="Jupyter"></i>
+        </div>
+      </div>
     </div>
 
-    <div class="user">
-      <div class="tech">
-        <h2>Frameworks</h2>
-        <i class="devicon-react-original colored"></i>
-        <i class="devicon-django-plain colored"></i>
-        <i class="devicon-fastapi-plain colored"></i>
-        <i class="devicon-tensorflow-original colored"></i>
-        <i class="devicon-pytorch-original colored"></i>
-      </div>
-      <div class="tech">
-        <h2>Tech Stack</h2>
-        <i class="devicon-python-plain colored"></i>
-        <i class="devicon-java-plain colored"></i>
-        <i class="devicon-typescript-plain colored"></i>
-        <i class="devicon-mysql-plain colored"></i>
-        <i class="devicon-oracle-original colored"></i>
-        <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
-        <i class="devicon-docker-plain colored"></i>
-        <i class="devicon-kubernetes-plain colored"></i>
-      </div>
-      <div class="tech">
-        <h2>Tools</h2>
-        <i class="devicon-github-original colored"></i>
-        <i class="devicon-jenkins-plain colored"></i>
-        <i class="devicon-jupyter-plain-wordmark colored"></i><br />
-        <i class="devicon-vscode-plain colored"></i>
-      </div>
-    </div>
 
     <script>
       const data = {
@@ -95,7 +164,7 @@
           "Latency/Performance", "WebSockets/Real-time", "React/FastAPI", "Responsible AI", "Evaluation/Guardrails",
 
           // **Layer 2: Modeling & NLP**
-          "Multi-Label NLP", "Quantization (4/5/8-bit)", "Mixed-Precision", "Vector Stores", "ASR → NLP Pipeline", "Time Series",
+          "Multi-Label NLP", "Quantization", "Mixed-Precision", "Vector Stores", "ASR → NLP Pipeline", "Time Series",
 
           // **Layer 3: Engineering & Infrastructure**
           "Django REST", "Cloud (AWS)", "Kubernetes/Docker",

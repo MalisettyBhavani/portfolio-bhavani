@@ -9,7 +9,6 @@ username: Bhavani Malisetty
 user_description:
 user_title: Data Science/Machine Learning
 email: bmalisetty@unomaha.edu
-# twitter_username: hi5daksh
-# github_username:  helloitsdaksh
+github_username:  MalisettyBhavani
 
 exclude: ['package.json', 'src' , 'node_modules']

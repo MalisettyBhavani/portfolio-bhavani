@@ -1,85 +1,144 @@
+<!-- ===== Featured Projects ===== -->
+<style>
+  .user-projects {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 64px 0;
+  }
+  /* shared image box */
+  .user-projects .image {
+    flex: 0 0 420px;
+    max-width: 420px;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  .user-projects .image img {
+    width: 100%;
+    height: 240px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+  }
+  /* content column */
+  .user-projects .contents {
+    flex: 1;
+    min-width: 280px;
+  }
+  /* alternate layout */
+  .images-left  { order: 1; }
+  .contents-right { order: 2; }
+
+  .images-right { order: 2; }
+  .contents-left  { order: 1; }
+
+  /* mobile */
+  @media (max-width: 900px) {
+    .user-projects { flex-direction: column; align-items: flex-start; }
+    .images-left, .images-right, .contents-left, .contents-right { order: initial; }
+    .user-projects .image { width: 100%; max-width: none; }
+  }
+</style>
+
 <div class="user-details">
-    <h1>Featured Projects</h1>
+  <h1>Featured Projects</h1>
 </div>
 
+<!-- Project 1: Image Right, Text Left -->
 <div class="user-projects">
-    <div class="images-right">
-        <img alt="Advanced Travel Planner" src="assets/img/travel.png"/>
-    </div>
-    <div class="contents">
-        <h3>Advanced Travel Planner</h3>
-        <ul>
-            <li>GPT-based LLM, React, WebSockets, Data Engineering</li>
-        </ul>
-        <p>Integrated a GPT-powered LLM to summarize complex weather and travel datasets into concise, actionable insights
-            to support efficient trip planning. Designed dynamic, map-based visualizations to recommend personalized itineraries
-            based on user preferences and real-time data. Built interactive front-end components using React and WebSockets for
-            smooth, low-latency user experience.</p>
-        <!-- <a class="project-link" href="#">Check it out</a> -->
-    </div>
+  <div class="image images-right">
+    <img src="assets/img/travel.png" alt="Advanced Travel Planner">
+  </div>
+  <div class="contents contents-left">
+    <h3>Advanced Travel Planner</h3>
+    <ul>
+      <li>GPT-based LLM, React, WebSockets, Data Engineering</li>
+    </ul>
+    <p>
+      Integrated a GPT-powered LLM to summarize complex weather and travel datasets into concise, actionable insights
+      to support efficient trip planning. Designed dynamic, map-based visualizations to recommend personalized itineraries
+      based on user preferences and real-time data. Built interactive front-end components using React and WebSockets for
+      smooth, low-latency user experience.
+    </p>
+    <a class="project-link" href="https://github.com/MalisettyBhavani/Advanced-Travel-Planner-App-Using-LLM" target="_blank" rel="noopener">Check it out</a>
+
+  </div>
 </div>
 
+<!-- Project 2: Image Left, Text Right -->
 <div class="user-projects">
-    <div class="images-left">
-        <img alt="Password Saver App" src="assets/img/password.png"/>
-    </div>
-    <div class="contents-right">
-        <h3>Password Saver App</h3>
-        <ul>
-            <li>Django, Fernet Encryption, SQL</li>
-        </ul>
-        <p>Built a secure password management system with end-to-end encryption using Django and Fernet. Implemented backend
-            logic for secure encryption/decryption workflows and error-handling. Designed a responsive UI with HTML, CSS, and JavaScript,
-            ensuring easy navigation and reliable data validation for safe credential storage and retrieval.</p>
-        <!-- <a class="project-link" href="#">Check it out</a> -->
-    </div>
+  <div class="image images-left">
+    <img src="assets/img/password.png" alt="Password Saver App">
+  </div>
+  <div class="contents contents-right">
+    <h3>Password Saver App</h3>
+    <ul>
+      <li>Django, Fernet Encryption, SQL</li>
+    </ul>
+    <p>
+      Built a secure password management system with end-to-end encryption using Django and Fernet. Implemented backend
+      logic for secure encryption/decryption workflows and error-handling. Designed a responsive UI with HTML, CSS, and JavaScript,
+      ensuring easy navigation and reliable data validation for safe credential storage and retrieval.
+    </p>
+    <a class="project-link" href="https://github.com/MalisettyBhavani/Password_Saver_Using_Django" target="_blank" rel="noopener">Check it out</a>
+
+  </div>
 </div>
 
+<!-- Project 3: Image Right, Text Left -->
 <div class="user-projects">
-    <div class="images-right">
-        <img alt="Breast Cancer Prediction System" src="assets/img/cancer.png"/>
-    </div>
-    <div class="contents">
-        <h3>Breast Cancer Prediction</h3>
-        <ul>
-            <li>SVM, Naive Bayes, Passive-Aggressive, Django</li>
-        </ul>
-        <p>Developed a breast cancer prediction model using machine learning algorithms such as SVM, Naive Bayes, and
-            Passive-Aggressive classifiers. Worked on feature engineering and evaluation using precision, recall, F1-score, and confusion
-            matrices. Deployed the model as a Django web app to enable real-time clinical inputs and tumor diagnosis predictions.</p>
-        <!-- <a class="project-link" href="#">Check it out</a> -->
-    </div>
+  <div class="image images-right">
+    <img src="assets/img/cancer.png" alt="Breast Cancer Prediction">
+  </div>
+  <div class="contents contents-left">
+    <h3>Breast Cancer Prediction</h3>
+    <ul>
+      <li>SVM, Naive Bayes, Passive-Aggressive, Django</li>
+    </ul>
+    <p>
+      Developed a breast cancer prediction model using machine learning algorithms such as SVM, Naive Bayes, and
+      Passive-Aggressive classifiers. Worked on feature engineering and evaluation using precision, recall, F1-score, and confusion
+      matrices. Deployed the model as a Django web app to enable real-time clinical inputs and tumor diagnosis predictions.
+    </p>
+  </div>
 </div>
 
+<!-- Project 4: Image Left, Text Right -->
 <div class="user-projects">
-    <div class="images-left">
-        <img alt="Quantized LLaMA for IoT Privacy Policy Language" src="assets/img/llama.png"/>
-    </div>
-    <div class="contents-right">
-        <h3>Quantized LLaMA Model for IoT Privacy Policy Language</h3>
-        <ul>
-            <li>LLM Quantization, NLP, IoT Deployment, Text Generation</li>
-        </ul>
-        <p>Explored 8-, 5-, and 4-bit quantization on LLaMA 2 models to reduce memory and computation costs for IoT systems.
-            Evaluated performance using ROUGE, BERTScore, and Word2Vec metrics, optimizing generation quality while preserving inference
-            efficiency. Achieved up to 15% improvement in next-token prediction with structured prompt engineering.</p>
-        <a class="project-link" href="https://www.mdpi.com/1999-5903/16/7/224">Check it out</a>
-    </div>
+  <div class="image images-left">
+    <img src="assets/img/llama.png" alt="Quantized LLaMA Model for IoT Privacy Policy Language">
+  </div>
+  <div class="contents contents-right">
+    <h3>Quantized LLaMA Model for IoT Privacy Policy Language</h3>
+    <ul>
+      <li>LLM Quantization, NLP, IoT Deployment, Text Generation</li>
+    </ul>
+    <p>
+      Compared baseline and quantized LLaMA-2 models to reduce compute and memory while preserving generation quality
+      for resource-constrained IoT deployments. Benchmarked with ROUGE, BERTScore, GloVe, and Word2Vec, and used structured
+      prompts to improve next-token prediction by 15% on incomplete privacy policy text. Produced guidance for lightweight
+      GenAI deployment and compliance tooling.
+    </p>
+    <a class="project-link" href="https://www.mdpi.com/1999-5903/16/7/224" target="_blank" rel="noopener">Check it out</a>
+  </div>
 </div>
 
+<!-- Project 5: Image Right, Text Left -->
 <div class="user-projects">
-    <div class="images-right">
-        <img alt="Privacy Policy Classification" src="assets/img/classifier.png"/>
-    </div>
-    <div class="contents">
-        <h3>Improving Understanding of Privacy Policies Using LLMs</h3>
-        <ul>
-            <li>LLaMA 2, Multi-Label Classification, React, WebSockets</li>
-        </ul>
-        <p>Developed a privacy policy classifier using baseline, fine-tuned, and quantized LLaMA 2 models to categorize policy content into
-            actionable segments (e.g., Data Security, Policy Change). Achieved 12% accuracy improvement over baseline using Supervised
-            Fine-Tuning (SFT). Built a React-based web interface for real-time paraphrasing, sentence-level classification, and category
-            visualization.</p>
-        <!-- <a class="project-link" href="#">Check it out</a> -->
-    </div>
+  <div class="image images-right">
+    <img src="assets/img/classifier.png" alt="Privacy Policy Classification">
+  </div>
+  <div class="contents contents-left">
+    <h3>Improving Understanding of Privacy Policies Using LLMs</h3>
+    <ul>
+      <li>LLaMA 2, Multi-Label Classification, React, WebSockets</li>
+    </ul>
+    <p>
+      Developed a multi-label privacy policy classifier using baseline, fine-tuned, and quantized LLaMA-2 models,
+      achieving a 12% accuracy lift on the OPP-115 dataset using Supervised Fine-Tuning. Built a React-based interface with
+      real-time sentence classification, paraphrasing, and category visualization powered by WebSockets.
+    </p>
+    <a class="project-link" href="https://www.proquest.com/openview/9769104cd04428b2c259f5fc2a09a83f/1?pq-origsite=gscholar&cbl=18750&diss=y" target="_blank" rel="noopener">Check it out</a>
+  </div>
 </div>

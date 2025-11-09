@@ -1,28 +1,96 @@
+<style>
+/* Centered hero like your screenshot */
+.header {
+  text-align: center;
+  padding: 8rem 1rem 4rem;
+}
+
+.site-title {
+  display: block;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 1.05;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.site-description {
+  display: block;
+  margin-top: .5rem;
+  font-size: clamp(1.2rem, 3.5vw, 2.4rem);
+  color: #cfd6de;
+}
+
+/* Social icon buttons */
+.header-icons {
+  margin: 1.8rem 0 0.8rem;
+}
+.header-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px; height: 58px;
+  margin: 0 .35rem;
+  border: 2px solid #e9eef5;
+  border-radius: 50%;
+  color: #e9eef5;
+  text-decoration: none;
+  transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+.header-icons a:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.1);
+  border-color: #fff;
+  color: #fff;
+}
+
+/* Nav links under the icons */
+.header-links .link,
+.header-links .link:visited {
+  color: #cfd6de;            
+  text-decoration: none;
+  font-size: 1.125rem;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color .2s ease, color .2s ease;
+}
+.header-links .link:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+/* Down chevron */
+.down { display: inline-block; margin-top: 1.5rem; color: #cfd6de; }
+.down:hover { color: #fff; }
+</style>
+
 <div id="particles-js">
   <div class="header">
-      <div class="profile-picture">
-       <img alt="profile_pic" style="width: 50%;" src="{{ "\assets\img\profile_picture.png" | prepend: site.baseurl }}" />
-      </div>
-      <h1>
-        <span class="site-title">{{site.username}}</span>
-        <span class="site-description">{{site.user_title}}</span>
-      </h1>
-      <div class="header-icons">
-        <a aria-label="Send email" href="mailto: {{site.email}}"><i class="icon fa fa-envelope"></i></a>
-<!--        <a aria-label="My Twitter" target="_blank" href="https://twitter.com/{{site.twitter_username}}"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>-->
-        <a aria-label="My Github" target="_blank" href="https://github.com/{{site.github_username}}"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
-        <a aria-label="My Instagram" target="_blank" href="https://www.instagram.com/pixels_to_memories"><i class="icon fa fa-instagram" aria-hidden="true"></i></a>
-        <a aria-label="My LinkedIn" target="_blank" href="https://linkedin.com/in/iamdaksh/"><i class="icon fa fa-linkedin" aria-hidden="true"></i></a>
-        <a aria-label="My Google Scholar" target="_blank" href="https://scholar.google.com/citations?user=tjIlRlEAAAAJ&hl=en&oi=ao"><i class="icon fa fa-graduation-cap" aria-hidden="true"></i></a>
-        <a aria-label="My Medium" target="_blank" href="https://medium.com/@helloitsdaksh007"><i class="icon fa fa-medium" aria-hidden="true"></i>
+    <div class="profile-picture">
+      <!-- No image for now -->
+      <!-- <img alt="profile_pic" style="width: 50%;" src="{{ "/assets/img/profile_picture.png" | prepend: site.baseurl }}" /> -->
+    </div>
 
-      </div>
-      <div class="header-links">
-        <a class="link" href="#about" data-scroll>About Me</a>
-        <a class="link" href="#projects" data-scroll>Projects</a>
-        <a class="link" href="#resume" data-scroll>Resume</a>
-        <a class="link" href="#hobby" data-scroll>Hobby</a>
-      </div>
+    <h1>
+      <span class="site-title">{{ site.username }}</span>
+      <span class="site-description">{{ site.user_title }}</span>
+    </h1>
+
+    <div class="header-icons">
+      <a aria-label="Send email" href="mailto:{{ site.email }}"><i class="icon fa fa-envelope"></i></a>
+      <!-- <a aria-label="My Twitter" target="_blank" href="https://twitter.com/{{ site.twitter_username }}"><i class="icon fa fa-twitter" aria-hidden="true"></i></a> -->
+      <a aria-label="My Github" target="_blank" href="https://github.com/{{ site.github_username }}"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+      <a aria-label="My LinkedIn" target="_blank" href="https://linkedin.com/in/bhavani-malisetty/"><i class="icon fa fa-linkedin" aria-hidden="true"></i></a>
+      <a aria-label="My Google Scholar" target="_blank" href="https://scholar.google.com/citations?user=Qmj7-hYAAAAJ&hl=en"><i class="icon fa fa-graduation-cap" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="header-links">
+      <a class="link" href="#about" data-scroll>About Me</a>
+      <a class="link" href="#projects" data-scroll>Projects</a>
+      <a class="link" href="#resume" data-scroll>Resume</a>
+      <a class="link" href="#hobby" data-scroll>Hobby</a>
+    </div>
   </div>
+
   <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
 </div>
